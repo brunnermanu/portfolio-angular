@@ -1,6 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
-import { Recipe } from '../recipe.model';
-import { RecipeService } from '../recipe.service';
+import { Project } from '../project.model';
+import { ProjectService } from '../project.service';
 import {ActivatedRoute, Route, Router} from '@angular/router';
 @Component({
   selector: 'app-recipe-list',
@@ -8,9 +8,9 @@ import {ActivatedRoute, Route, Router} from '@angular/router';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[];
+  recipes: Project[];
 
-  constructor(private recipeService: RecipeService,
+  constructor(private recipeService: ProjectService,
               private router: Router,
               private route: ActivatedRoute) {
   }

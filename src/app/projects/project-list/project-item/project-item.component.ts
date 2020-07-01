@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Recipe } from '../../recipe.model';
+import { Project } from '../../project.model';
 
 @Component({
   selector: 'app-recipe-item',
-  templateUrl: './recipe-item.component.html',
-  styleUrls: ['./recipe-item.component.scss']
+  templateUrl: './project-item.component.html',
+  styleUrls: ['./project-item.component.scss']
 })
 export class RecipeItemComponent implements OnInit {
-  @Input() recipe: Recipe;
+  @Input() project: Project;
   @Input() index: number;
   @Input() routerLinkActive: string
 

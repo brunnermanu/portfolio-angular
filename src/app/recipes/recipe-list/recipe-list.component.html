@@ -1,9 +1,0 @@
-<div class="btn">
-  <app-button [add]="true" [buttonName]="'New Recipe'" (click)="onNewRecipe()"></app-button>
-</div>
-<div class="recipe-list">
-  <app-recipe-item
-    *ngFor="let recipeElement of recipes; let i = index"
-    [recipe]="recipeElement"
-  [index]="i"></app-recipe-item>
-</div>

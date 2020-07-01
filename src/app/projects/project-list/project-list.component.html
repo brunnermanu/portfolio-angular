@@ -1,0 +1,7 @@
+
+<div class="container">
+  <app-project-item
+    *ngFor="let recipeElement of recipes; let i = index"
+    [project]="recipeElement"
+  [index]="i"></app-project-item>
+</div>
