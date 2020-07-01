@@ -1,15 +1,11 @@
-.list {
-  width: 400px;
+.container {
+  position: relative;
+  width: 1000px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 0 auto 0 auto;
-
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
 }
-
 
 
 

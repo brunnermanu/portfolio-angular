@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {ShoppingListService} from './shopping-list.service';
+
 
 @Component({
   selector: 'app-shopping-list',
-  templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.scss'],
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss'],
 })
-export class ShoppingListComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
 
   constructor() {

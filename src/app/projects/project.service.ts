@@ -1,36 +1,63 @@
 import { Project } from './project.model';
 import { EventEmitter, Injectable } from '@angular/core';
-import { Ingredient } from '../shared/ingredient.model';
-import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { Projects } from '@angular/cli/lib/config/schema';
 
 @Injectable()
 export class ProjectService {
   recipeSelected = new EventEmitter<Project>();
+  projectsChanged = new EventEmitter<Projects[]>();
 
-  private recipes: Project[] = [
-    new Project('Gravuren Brunner',
-      'This is simply a Test',
+  private projects: Project[] = [
+    new Project('website',
+      'Gravuren Brunner',
+      'This was my very first project created with HTML and CSS.',
       './assets/img/Handgravur.jpeg',
-      'https://gravurenbrunner.ch/'),
-    new Project('Thaicurry',
-      'This is simply a Test',
-      'https://res.cloudinary.com/swissmilk/image/fetch/q_auto,f_auto/' +
-      'https://api.swissmilk.ch/wp-content/uploads/2019/05/ss-alltagsrezepte-winter-geschmortes-wintergemuese-mit-poulet.jpg',
-      ''),
+      'https://gravurenbrunner.ch/',
+      ),
+    new Project('website',
+      'Shine Light',
+      'Website created with HTML and CSS.',
+      './assets/img/Kuechenbeleuchtung.jpg',
+      'https://shinelight.ch/',
+      ),
+    new Project('app',
+      'Hangman-Game',
+      'Created with Javascript.',
+      './assets/img/hangman.jpg',
+      'https://manu-brunner-hangman.netlify.app',
+      ),
+    new Project('app',
+      'Todo-App',
+      'Created with Javascript.',
+      './assets/img/Todolist.jpg',
+      'https://manu-brunner-todo.netlify.app',
+      ),
+    new Project('app',
+      'Shopping List & Recipe Book',
+      'My actual project is created with Angular. Feel free to look how the project is going.',
+      './assets/img/grocery1.jpg',
+      'https://shoppinglist-bb6ef.firebaseapp.com',
+      ),
   ];
 
-  constructor(private shoppingListService: ShoppingListService) {
-  }
-  getRecipes() {
-    return this.recipes.slice();
+  getProjects() {
+    return this.projects.slice();
   }
 
-  getRecipe(index: number) {
-    return this.recipes[index];
+  getWebsites() {
+    return this.projectsChanged.emit(this.projects.filter(x => x.group === 'website'));
   }
 
-  addIngredientsToShoppingList(ingredients: Ingredient[]) {
-    this.shoppingListService.addIngredients(ingredients);
+  getApps() {
+    // return this.projects.filter(x => x.group === 'app');
+    return this.projectsChanged.emit(this.projects.filter(x => x.group === 'app'));
   }
 
+  getActual() {
+    return this.projectsChanged.emit(this.projects.filter(x => x.name === 'Shopping List & Recipe Book'));
+  }
+
+  getAllProjects() {
+    return this.projectsChanged.emit(this.projects);
+  }
 }

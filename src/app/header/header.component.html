@@ -1,27 +1,16 @@
-<div class="header">
 
-  <ul class="header-nav-bar-ul header-nav-bar-left">
-    <li class="header-nav-bar-left__dropdown">
-      <ul class="header-nav-bar-left__dropdown-menu">
-        <li class="header-nav-bar-left__li"><a style="cursor: pointer">Save Data</a></li>
-        <li class="header-nav-bar-left__li"><a style="cursor: pointer">Fetch Data</a></li>
-      </ul>
-    </li>
-  </ul>
 
-  <div class="header__logo">
-    <a href="#">
-      <div class ="header__logo">
-        <img src="../assets/img/RecipebookLogo.png" class= "header__img" alt="Logo">
-      </div>
-    </a>
+<header class="header">
+  <li routerLinkActive="active"><a class="about"  routerLink="/about">About</a></li>
+  <div class="logo">MB</div>
+
+  <div class="dropdown">
+    <li routerLinkActive="active"><a href="#projects" class="about" routerLink="/project" (click)="onProjects()">Projects</a></li>
+    <div class="dropdown-content">
+      <li routerLinkActive="active"><a (click)="onWebsites()">Websites</a></li>
+      <li routerLinkActive="active"><a (click)="onApps()">Apps</a></li>
+      <li routerLinkActive="active"><a (click)="onActual()">Actual Project</a></li>
+    </div>
   </div>
 
-  <div class="header-nav-bar">
-    <ul class="header-nav-bar__ul">
-      <li class="header-nav-bar__li" routerLinkActive="active"><a routerLink="/recipes" >Recipes</a></li>
-      <li class="header-nav-bar__li" routerLinkActive="active"><a routerLink="/shopping-list" >Shopping List</a></li>
-    </ul>
-  </div>
-
-</div>
+</header>

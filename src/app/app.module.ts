@@ -4,18 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { ButtonComponent } from './button/button.component';
+import { ProjectComponent } from './projects/project.component';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
+import { ProjectItemComponent } from './projects/project-list/project-item/project-item.component';
+import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
-import { ShoppingListService } from './shopping-list/shopping-list.service';
-import { RecipeService } from './recipes/recipe.service';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
-import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ProjectService } from './projects/project.service';
+
+
 
 
 
@@ -25,16 +21,11 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    RecipeStartComponent,
-    RecipeEditComponent
+    ProjectComponent,
+    ProjectListComponent,
+    ProjectItemComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,10 +33,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [
-    ShoppingListService,
-    RecipeService
-  ],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

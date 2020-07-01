@@ -1,24 +1,14 @@
-<!--<a class="recipe-area"-->
-<!--  style="cursor: pointer"-->
-<!--  [routerLink]="[index]"-->
-<!--  routerLinkActive="active">-->
-<!--    <div class="pull-left">-->
-<!--      <h3>{{ recipe.name }}</h3>-->
-<!--      <p>{{ recipe.description }}</p>-->
-<!--    </div>-->
-<!--    <span>-->
-<!--        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="project-img">-->
-<!--      </span>-->
-<!--</a>-->
-<div class="card website notactual">
-  <div class="imgBx" data-text="Gravuren Brunner">
-    <img [src]="project.imagePath" alt="{{ project.name }}" class="project-img">
+
+<div class="card">
+  <div class="imgBx">
+    <img [src]="project.imagePath" alt="{{ project.name }}" class="project-img" >
   </div>
   <div class="content">
     <div>
       <h3>{{ project.name }}</h3>
       <p>{{ project.description }}</p>
-      <a href="https://gravurenbrunner.ch/">see project</a>
+      <a [href]="project.websitePath">see project</a>
     </div>
   </div>
 </div>
+
