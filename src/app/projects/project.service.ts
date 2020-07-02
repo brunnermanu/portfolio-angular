@@ -8,6 +8,12 @@ export class ProjectService {
   projectsChanged = new EventEmitter<Projects[]>();
 
   private projects: Project[] = [
+    new Project('app',
+      'Shopping List & Recipe Book',
+      'My actual project is created with Angular. Feel free to look how the project is going.',
+      './assets/img/grocery1.jpg',
+      'https://shoppinglist-bb6ef.firebaseapp.com',
+    ),
     new Project('website',
       'Gravuren Brunner',
       'This was my very first project created with HTML and CSS.',
@@ -16,7 +22,7 @@ export class ProjectService {
       ),
     new Project('website',
       'Shine Light',
-      'Website created with HTML and CSS.',
+      'Website created with HTML and CSS. Later Wordpress was integrated.',
       './assets/img/Kuechenbeleuchtung.jpg',
       'https://shinelight.ch/',
       ),
@@ -33,11 +39,12 @@ export class ProjectService {
       'https://manu-brunner-todo.netlify.app',
       ),
     new Project('app',
-      'Shopping List & Recipe Book',
-      'My actual project is created with Angular. Feel free to look how the project is going.',
-      './assets/img/grocery1.jpg',
-      'https://shoppinglist-bb6ef.firebaseapp.com',
-      ),
+      'Notes-App',
+      'Created with Javascript.',
+      './assets/img/notes.jpg',
+      'https://manu-brunner-notes.netlify.app',
+    ),
+
   ];
 
   getProjects() {
@@ -49,7 +56,6 @@ export class ProjectService {
   }
 
   getApps() {
-    // return this.projects.filter(x => x.group === 'app');
     return this.projectsChanged.emit(this.projects.filter(x => x.group === 'app'));
   }
 

@@ -15,7 +15,7 @@
 }
 
 .header a:hover {
-  color: #AE05FF;
+  color: rgba(0, 232, 172, 0.98);
 }
 .header a:visited {
   text-decoration: underline;
@@ -24,6 +24,11 @@
 .header li {
   list-style-type: none;
   color: black;
+}
+
+.logo {
+  font-family: 'Miss Fajardose', cursive;
+  font-size: 50px;
 }
 
 .dropdown {
@@ -59,8 +64,28 @@
 
 
 .active {
-  color: #AE05FF;
+  color: #06ffdc;
   text-decoration: underline;
 }
 
 
+@media (max-width: 430px) {
+  .header {
+    font-size: 20px;
+    height: 150px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .dropdown-content a {
+    padding: 9px 10px;
+    font-size: 15px;
+  }
+
+  .dropdown-content {
+    min-width: 150px;
+    z-index: 1;
+  }
+}
