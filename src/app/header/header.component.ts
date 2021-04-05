@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Project} from '../projects/project.model';
 import {ProjectService} from '../projects/project.service';
-import {ActivatedRoute, Router} from '@angular/router';
 
 
 @Component({
@@ -12,9 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class HeaderComponent  {
   project: Project;
 
-  constructor(private projectService: ProjectService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private projectService: ProjectService) { }
 
   onProjects() {
     return this.projectService.getAllProjects();

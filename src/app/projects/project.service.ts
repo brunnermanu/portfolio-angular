@@ -10,9 +10,12 @@ export class ProjectService {
   private projects: Project[] = [
     new Project('app',
       'Shopping List & Recipe Book',
-      'My actual project is created with Angular. Feel free to look how the project is going.',
+      'My actual project is created with Angular. ' +
+      'The aim was to save recipes, change them and save the ingredients ' +
+      'directly on the shopping list.You are welcome to use the dummy user to try out the app ' +
+      '(test1@hotmail.com / password: testtest) or generate one on yourself.',
       './assets/img/groceries.jpeg',
-      'https://manus-recipe-book.netlify.app',
+      'https://shoppinglist-bb6ef.web.app',
     ),
     new Project('website',
       'Gravuren Brunner',
